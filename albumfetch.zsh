@@ -9,10 +9,9 @@ albumfetch() {
     local logo=""
 
     local album_now=$(playerctl -p spotify metadata album 2>/dev/null)
-    local status=$(playerctl status 2>/dev/null)
+    local pstatus=$(playerctl status 2>/dev/null)
 
-    if [[ -n "$album_now" && ("$status" == "Playing" || "$status" == "Paused") ]]; then
-        
+    if [[ -n "$album_now" && ("$pstatus" == "Playing" || "$pstatus" == "Paused") ]]; then
         local clean_name="${album_now%% \(*}"
         clean_name="${${clean_name}//[ >]/_}"
 
