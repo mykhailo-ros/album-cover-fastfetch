@@ -20,11 +20,11 @@ fi
 
 cp "$SCRIPT_DIR/albumfetch.zsh" "$HOME/.oh-my-zsh/custom/"
 
-if grep -q "albumfetch()" "$ZSHRC"; then
+if grep -q "albumfetch" "$ZSHRC"; then
     echo "Function call is already added to .zshrc"
 else
     echo "Adding function call to .zshrc..."
-    echo "albumfetch()" >> "$ZSHRC"
+    echo "albumfetch" >> "$ZSHRC"
 fi
 
 echo "Done. Add your covers to $LOGOS_DIR."
